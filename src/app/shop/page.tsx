@@ -1,5 +1,7 @@
+"use client";
+
 import CardComponent from "@/components/homework/CardComponent";
-import Image from "next/image";
+import React from "react";
 
 const products = [
   {
@@ -66,7 +68,7 @@ const products = [
     badge: "Sale",
     rating: 4.1,
     image:
-      "https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=400&q=80",
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&q=80",
   },
   {
     id: 7,
@@ -88,7 +90,7 @@ const products = [
     badge: undefined,
     rating: 4.7,
     image:
-      "https://images.unsplash.com/photo-1601925228869-35f40c5c34eb?w=400&q=80",
+      "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=400&q=80",
   },
   {
     id: 9,
@@ -132,27 +134,27 @@ const products = [
     badge: "New",
     rating: 4.5,
     image:
-      "https://images.unsplash.com/photo-1601925228869-35f40c5c34eb?w=400&q=80",
+      "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&q=80",
   },
 ];
 
-export default function Home() {
+export default function ShopPage() {
   return (
-     <div className="p-8">
-          <div className="grid grid-cols-4 gap-6">
-            {products.map((product) => (
-              <CardComponent
-                key={product.id}
-                image={product.image}
-                title={product.title}
-                description={product.description}
-                price={product.price}
-                originalPrice={product.originalPrice}
-                badge={product.badge}
-                rating={product.rating}
-              />
-            ))}
-          </div>
-        </div>
+    <div className="p-8">
+      <div className="grid grid-cols-4 gap-6">
+        {products.map((product) => (
+          <CardComponent
+            key={product.id}
+            image={product.image}
+            title={product.title}
+            description={product.description}
+            price={product.price}
+            originalPrice={product.originalPrice}
+            badge={product.badge}
+            rating={product.rating}
+          />
+        ))}
+      </div>
+    </div>
   );
 }
